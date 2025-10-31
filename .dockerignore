@@ -1,0 +1,14 @@
+# Git
+.git
+.gitignore
+
+# Node
+client/node_modules
+npm-debug.log
+
+# Go (o código gerado não deve ser copiado, mas gerado)
+server/pb
+server/server_binary
+
+# OS
+.DS_Store

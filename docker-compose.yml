@@ -1,0 +1,28 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    ports:
+      - "50051:50051"
+    networks:
+      - chat-net
+    container_name: grpc-server
+
+  client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    depends_on:
+      - server
+    networks:
+      - chat-net
+    environment:
+      - GRPC_SERVER=server:50051
+    # Required for an interactive console application
+    stdin_open: true # Keeps STDIN open (equivalent to -i)
+    tty: true        # Allocates a TTY (equivalent to -t)
+
+networks:
+  chat-net:
+    driver: bridge
