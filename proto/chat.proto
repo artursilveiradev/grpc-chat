@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package chat;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/artursilveiradev/grpc-chat/server/pb";
+
+service ChatService {
+  rpc Connect(stream ChatMessage) returns (stream ChatMessage);
+}
+
+message ChatMessage {
+  string user = 1;
+  string text = 2;
+  google.protobuf.Timestamp timestamp = 3;
+}
