@@ -1,0 +1,46 @@
+# Go binary files
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with 'go test -c'
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# Binary output directory
+bin/
+dist/
+
+# IDE specific files
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Environment variables
+.env
+*.env
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
