@@ -6,7 +6,7 @@
 client/node_modules
 npm-debug.log
 
-# Go (o código gerado não deve ser copiado, mas gerado)
+# Go (generated code should not be copied, but generated)
 server/pb
 server/server_binary
 
